@@ -1,0 +1,19 @@
+spring:
+    profiles: 
+         active: local
+    mvc: 
+      view: 
+         prefix: /views/
+         suffix: .html
+         
+name: prod-YAML
+environment: production
+
+management: 
+       security: 
+             enabled: false
+             
+logging: 
+    level: 
+       org: 
+         hibernate: DEBUG
