@@ -74,10 +74,11 @@ public class BuilderInfoDAO {
 		System.out.println("==== Builder info Saved ====");
 	}
 	
-	public void fetchBuiIderDetails(int id) {
+	public SmBuiIderInfo fetchBuiIderDetails(int id) {
 		
 		SmBuiIderInfo  buiIderInfo = entityManager.find(SmBuiIderInfo.class, new Integer(id));
 		logger.info("BuiIder info:: "+buiIderInfo);
+		return buiIderInfo;
 	}
 
 	public void persistBuilderDetails(SmBuiIderInfo smBuiIderInfo) {

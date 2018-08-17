@@ -71,8 +71,9 @@ public class PersistenceConfig {
 
     final Properties additionalProperties() {
         final Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "validate");
         hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
+        //hibernateProperties.setProperty("hibernate.default_schema", "smart_admin");
         // hibernateProperties.setProperty("hibernate.globally_quoted_identifiers", "true");
         return hibernateProperties;
     }
